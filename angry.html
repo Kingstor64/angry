@@ -24,7 +24,7 @@
         </a-assets>
         <a-marker type="barcode" value="27" raycaster="objects: .clickable" emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity gltf-model="#a" scale="3 3 3" position="0 0 0" class="clickable" gesture-handler
+            <a-entity gltf-model="#a" scale="3 3 3" position="0 0 0" class="clickable" gesture-handler 
                 sound="src: #audioazul; autoplay: false; volume: 1"></a-entity>
         </a-marker>
 
@@ -54,5 +54,68 @@
 
         <a-entity camera></a-entity>
     </a-scene>
+
+    <script>
+			var azulAudio = document.getElementById('audioazul');
+			var redAudio = document.getElementById('audiored');
+            var stellaAudio = document.getElementById('audiostella');
+            var pigAudio = document.getElementById('audiopig');
+            var amarilloAudio = document.getElementById('audioamarillo');
+
+		   
+			document.querySelector('[value="27"]').addEventListener('markerFound', function () {
+				azulAudio.play();
+			});
+
+			
+			document.querySelector('[value="27"]').addEventListener('markerLost', function () {
+				azulAudio.pause();
+				azulAudio.currentTime = 0; // reiniciar el audio desde el inicio
+			});
+
+			
+			document.querySelector('[value="28"]').addEventListener('markerFound', function () {
+				redAudio.play();
+			});
+
+			
+			document.querySelector('[value="28"]').addEventListener('markerLost', function () {
+				redAudio.pause();
+				redAudio.currentTime = 0; // reiniciar el audio desde el inicio
+			});
+
+
+            document.querySelector('[value="29"]').addEventListener('markerFound', function () {
+				amarilloAudio.play();
+			});
+
+			
+			document.querySelector('[value="29"]').addEventListener('markerLost', function () {
+				amarilloAudio.pause();
+				amarilloAudio.currentTime = 0; // reiniciar el audio desde el inicio
+			});
+
+
+            document.querySelector('[value="30"]').addEventListener('markerFound', function () {
+				stellaAudio.play();
+			});
+
+			
+			document.querySelector('[value="30"]').addEventListener('markerLost', function () {
+				stellaAudio.pause();
+				stellaAudio.currentTime = 0; // reiniciar el audio desde el inicio
+			});
+
+
+            document.querySelector('[value="32"]').addEventListener('markerFound', function () {
+				pigAudio.play();
+			});
+
+			
+			document.querySelector('[value="32"]').addEventListener('markerLost', function () {
+				pigAudio.pause();
+				pigAudio.currentTime = 0; // reiniciar el audio desde el inicio
+			});
+		</script>
 </body>
 </html>
