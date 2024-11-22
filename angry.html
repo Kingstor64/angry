@@ -22,34 +22,39 @@
             <audio id="audioamarillo" src="amarillo.mp3" preload="auto"></audio>
             
         </a-assets>
-        <a-marker type="barcode" value="27" raycaster="objects: .clickable" emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;">
+            <a-marker type="barcode" value="27" raycaster="objects: .clickable" emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;">
             <a-entity gltf-model="#a" scale="3 3 3" position="0 0 0" class="clickable" gesture-handler 
                 sound="src: #audioazul; autoplay: false; volume: 1"></a-entity>
+            <a-text value="Azul" align="center" position="0 3 0" color="white" scale="2 2 2"></a-text>
         </a-marker>
 
         <a-marker type="barcode" value="28" raycaster="objects: .clickable" emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity gltf-model="#red" scale="1 1 1" position= "0 0 0" class="clickable" gesture-handler
+            cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity gltf-model="#red" scale="1 1 1" position="0 0 0" class="clickable" gesture-handler
                 sound="src: #audiored; autoplay: false; volume: 1"></a-entity>
+            <a-text value="Red" align="center" position="0 2.5 0" color="white" scale="2 2 2"></a-text>
         </a-marker>
 
         <a-marker type="barcode" value="29" raycaster="objects: .clickable" emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;">
+            cursor="fuse: false; rayOrigin: mouse;">
             <a-entity gltf-model="#amarillo" scale="3 3 3" position="0 0 0" class="clickable" gesture-handler
                 sound="src: #audioamarillo; autoplay: false; volume: 1"></a-entity>
+            <a-text value="Chunk" align="center" position="0 2 0" color="white" scale="2 2 2"></a-text>
         </a-marker>
 
         <a-marker type="barcode" value="30" raycaster="objects: .clickable" emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity gltf-model="#stella" scale="1 1 1" position= "0 0 0" class="clickable" gesture-handler
+            cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity gltf-model="#stella" scale="1 1 1" position="0 0 0" class="clickable" gesture-handler
                 sound="src: #audiostella; autoplay: false; volume: 1"></a-entity>
+            <a-text value="Stella" align="center" position="0 1.5 0" color="white" scale="2 2 2"></a-text>
         </a-marker>
 
         <a-marker type="barcode" value="32" raycaster="objects: .clickable" emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;">
+            cursor="fuse: false; rayOrigin: mouse;">
             <a-entity gltf-model="#pig" scale="0.9 0.9 0.9" position="0 0 0" class="clickable" gesture-handler
                 sound="src: #audiopig; autoplay: false; volume: 1"></a-entity>
+            <a-text value="King Pig" align="center" position="0 2 0" color="white" scale="2 2 2"></a-text>
         </a-marker>
 
         <a-entity camera></a-entity>
